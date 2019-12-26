@@ -27,6 +27,8 @@
     "@webpack-cli/serve": "^0.2.0",
     "firebase-tools": "^7.11.0",
     "glob": "^7.1.6",
+    "moment-locales-webpack-plugin": "^1.1.2",
+    "moment-timezone-data-webpack-plugin": "^1.1.0",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10"
   },

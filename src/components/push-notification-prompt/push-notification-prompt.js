@@ -2,7 +2,6 @@ import { LitElement, html } from 'lit-element';
 
 import firebase from "firebase/app";
 import 'firebase/messaging';
-import 'firebase/firestore';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAr6815fc2pES5Kkmaw06UmeUwdGSHJ0Zw",
@@ -16,7 +15,6 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
-const db = firebase.firestore();
 
 class PushNotificationHelper extends LitElement {
   static get tagName() { return 'push-notification-helper'; }
@@ -44,14 +42,16 @@ class PushNotificationHelper extends LitElement {
 
   async handleClick(evt) {
     try {
-
       await messaging.requestPermission();
+      const firestorePromise = import('firebase/firestore');
       messaging.usePublicVapidKey('BOku3HZQj5uNI0kyE0bB0-V1wbnyC-v5QNhOwSkFptpsbzMFCyWN5rOpQe3QPI--LmK6sUhI3gh-cZIY-FbqkLE');
       
       const token = await messaging.getToken();
       console.log('User Token:', token);
 
       if (token) {
+        await firestorePromise;
+        const db = firebase.firestore();
         await db.collection('tokens').add({
           token,
         });
