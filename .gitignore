@@ -108,6 +108,3 @@ dist
 
 # Firebase Hosting Cache
 .firebase
-
-!/dist/index.html
-!/dist/firebase-messaging-sw.js
