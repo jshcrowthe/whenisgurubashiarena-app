@@ -19,10 +19,10 @@ exports.notifySubscribedUsersCron = functions.pubsub.schedule('every 3 hours fro
       const message = {
         notification: {
           title: 'Gurubashi Arena Alert',
-          body : 'Gurubashi Arena starts in 10 minutes. Prepare yourself!'
+          body : 'Gurubashi Arena starts soon. Prepare yourself!'
         },
         tokens: registrationTokens,
-      }
+      };
       
       const multicast = await admin.messaging().sendMulticast(message);
 
