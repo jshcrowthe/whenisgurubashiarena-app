@@ -6,8 +6,8 @@
   "scripts": {
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
-    "build": "webpack",
-    "deploy": "webpack && firebase deploy"
+    "build": "webpack --mode production",
+    "deploy": "webpack --mode production && firebase deploy"
   },
   "repository": {
     "type": "git",
