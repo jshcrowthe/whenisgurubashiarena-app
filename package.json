@@ -4,7 +4,7 @@
   "description": "A PWA to let you know when the next Gurubashi Arena is",
   "main": "src/index.js",
   "scripts": {
-    "watch": "webpack --watch",     
+    "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
     "build": "webpack"
   },
@@ -24,11 +24,16 @@
   "homepage": "https://github.com/jshcrowthe/whenisgurubashiarena-app#readme",
   "devDependencies": {
     "@webpack-cli/serve": "^0.2.0",
+    "firebase-tools": "^7.11.0",
     "glob": "^7.1.6",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "lit-element": "^2.2.1"
+    "firebase": "^7.6.1",
+    "lit-element": "^2.2.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "rxjs": "^6.5.3"
   }
 }
