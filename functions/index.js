@@ -3,7 +3,7 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 const db = admin.firestore();
 
-exports.notifySubscribedUsersCron = functions.pubsub.schedule('50 2/3 * * *')
+exports.notifySubscribedUsersCron = functions.pubsub.schedule('every 3 hours from 02:50 to 23:59')
   .timeZone('America/Los_Angeles')
   .onRun(async () => {
     try {
