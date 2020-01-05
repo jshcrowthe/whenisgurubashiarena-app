@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element';
+import { LitElement, css, html } from 'lit-element';
 import { timer } from 'rxjs';
 import moment from "moment-timezone";
 
@@ -38,7 +38,7 @@ class CountdownTimer extends LitElement {
       const next = computeNextEvent(now);
       const duration = moment.duration(next.diff(now));
     
-      this.timeToNext = `${duration.hours()}h ${duration.minutes()}m ${duration.seconds()}s`;
+      this.timeToNext = `${duration.hours()}:${duration.minutes()}:${duration.seconds()}`;
     });
   }
   
