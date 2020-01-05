@@ -28,6 +28,12 @@ class CountdownTimer extends LitElement {
       timeToNext: String
     }
   }
+
+  static get styles() {
+    return css`
+      p { font-size: 10em; }
+    `;
+  }
   
   constructor() {
     super();
@@ -37,8 +43,12 @@ class CountdownTimer extends LitElement {
       const now = moment();
       const next = computeNextEvent(now);
       const duration = moment.duration(next.diff(now));
-    
-      this.timeToNext = `${duration.hours()}:${duration.minutes()}:${duration.seconds()}`;
+      
+      const hours = `${duration.hours()}`.padStart(2, "0");
+      const minutes = `${duration.minutes()}`.padStart(2, "0");
+      const seconds = `${duration.seconds()}`.padStart(2, "0");
+
+      this.timeToNext = `${hours}:${minutes}:${seconds}`;
     });
   }
   
