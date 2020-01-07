@@ -31,7 +31,7 @@ class CountdownTimer extends LitElement {
 
   static get styles() {
     return css`
-      p { font-size: 10em; }
+      p { font-size: 5em; }
     `;
   }
   
