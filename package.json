@@ -36,7 +36,7 @@
     "firebase": "^7.6.1",
     "lit-element": "^2.2.1",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.27",
+    "moment-timezone": "^0.5.35",
     "rxjs": "^6.5.3"
   }
 }
