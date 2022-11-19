@@ -30,7 +30,7 @@
     "moment-locales-webpack-plugin": "^1.1.2",
     "moment-timezone-data-webpack-plugin": "^1.1.0",
     "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "firebase": "^7.6.1",
